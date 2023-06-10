@@ -59,7 +59,7 @@ describe('<PlanetCard />', () => {
     expect(planetCardsList).toHaveLength(8);
   });
 
-  it('Todos os planetas devem estar sendo listados na tela:', () => {
+  it('Todos os planetas devem estar sendo listados na tela:', async () => {
     render(<SolarSystem />);
 
     const planetCardsList = screen.getAllByTestId('planet-card');
