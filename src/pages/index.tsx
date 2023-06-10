@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Header from '../components/Header';
-import Missions from '../components/Missions';
-import SolarSystem from '../components/SolarSystem';
+import Header from '@/components/Header';
+import Missions from '@/components/Missions';
+import SolarSystem from '@/components/SolarSystem';
 
 export default function home() {
   return (
