@@ -14,6 +14,8 @@ export default function PlanetCard(props: PropPlanetCard) {
       <Image
         src={planetImage}
         alt={planetName}
+        height={250}
+        width={250}
       />
     </li>
   );
