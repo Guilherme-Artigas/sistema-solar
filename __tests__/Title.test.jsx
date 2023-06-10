@@ -23,4 +23,12 @@ describe('<Title />', () => {
 
     expect(textTitle).toHaveTextContent(/Planetas/i);
   });
+
+  it('O componente <SolarSystem /> renderiza o componente <Title />:', () => {
+    render(<SolarSystem />);
+
+    const textH2 = screen.getByRole('heading', { name: /Planetas/i });
+
+    expect(textH2).toBeInTheDocument();
+  });
 });
