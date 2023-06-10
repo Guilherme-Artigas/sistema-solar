@@ -50,4 +50,22 @@ describe('<PlanetCard />', () => {
     expect(alt).toBeInTheDocument();
     expect(alt).toHaveAttribute('alt', name);
   });
+
+  it('Deve ser renderizado um componente <PlanetCard /> para cada planeta da lista:', () => {
+    render(<SolarSystem />);
+
+    const planetCardsList = screen.getAllByTestId('planet-card');
+
+    expect(planetCardsList).toHaveLength(8);
+  });
+
+  it('Todos os planetas devem estar sendo listados na tela:', () => {
+    render(<SolarSystem />);
+
+    const planetCardsList = screen.getAllByTestId('planet-card');
+
+    planetCardsList.forEach((planet, index) => {
+      expect(planet).toHaveTextContent(planets[index].name);
+    });
+  });
 });
