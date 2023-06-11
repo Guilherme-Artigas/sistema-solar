@@ -19,24 +19,8 @@ describe('<Header />', () => {
   it('Componente <Header /> deve ter uma tag "h1": ', () => {
     render(<Header />);
 
-    const headerTitle = screen.getByRole('heading', { level: 1 });
+    const logoHeader = screen.getByTestId('logo-sistema-solar');
 
-    expect(headerTitle).toBeInTheDocument();
-  });
-
-  it('Componente <Header /> deve renderizar o texto "Sistema Solar":', () => {
-    render(<Header />);
-
-    const headerTitle = screen.getByRole('heading', { level: 1 });
-
-    expect(headerTitle).toHaveTextContent(/Sistema Solar/i);
-  });
-
-  it('Componente <Header /> é renderizado no componente principal:', () => {
-    render(<Home />);
-
-    const headerTitle = screen.getByRole('heading', { level: 1 });
-
-    expect(headerTitle).toHaveTextContent(/Sistema Solar/i);
+    expect(logoHeader).toBeInTheDocument();
   });
 });

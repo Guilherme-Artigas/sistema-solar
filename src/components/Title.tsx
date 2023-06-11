@@ -5,5 +5,5 @@ export interface PropTitle {
 export default function Title(props: PropTitle) {
   const { headline } = props;
 
-  return <h2>{headline}</h2>;
+  return <h2 className='text-4xl'>{headline}</h2>;
 };

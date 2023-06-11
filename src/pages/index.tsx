@@ -5,7 +5,7 @@ import SolarSystem from '@/components/SolarSystem';
 
 export default function home() {
   return (
-    <div>
+    <div className='bg-[url("../images/background.png")] text-white flex flex-col items-center'>
       <Head>
         <title>Sistema Solar</title>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
