@@ -16,6 +16,7 @@ export default function MissionCard(props: PropMissionCard) {
         w-11/12
         rounded-lg m-1
         bg-black/70
+        md:w-2/5
       `}
     >
       <p className='border-b p-3'>{name}</p>

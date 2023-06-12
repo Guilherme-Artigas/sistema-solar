@@ -6,7 +6,7 @@ export default function SolarSystem() {
   return (
     <div data-testid='solar-system' className='text-center'>
       <Title headline='PLANETAS' />
-      <ul>
+      <ul className='md:flex md:mt-5'>
         {planets.map(({ name, image }) =>
           <PlanetCard planetImage={image} planetName={name} key={name} />
         )}

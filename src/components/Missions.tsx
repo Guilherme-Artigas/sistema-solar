@@ -4,9 +4,18 @@ import missions from '../data/missions';
 
 export default function Missions() {
   return (
-    <div data-testid='missions' className='bg-white/10 text-center py-10 rounded-lg'>
+    <div
+      data-testid='missions'
+      className={`
+        bg-white/10 text-center py-10 rounded-lg
+          md:w-11/12
+          md:mt-20
+      `}
+    >
       <Title headline='Missões' />
-      <ul className='mt-10 flex flex-col items-center'>
+      <ul className={`
+        mt-10 flex flex-wrap justify-center
+      `}>
         {missions.map(({ name, year, country, destination }) =>
           <MissionCard
             key={name}
